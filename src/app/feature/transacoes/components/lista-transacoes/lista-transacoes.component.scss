@@ -1,0 +1,26 @@
+.listaTransacoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__coluna {
+    flex: 1;
+
+    p {
+      word-wrap: break-word;
+    }
+  }
+
+  &__descricao {
+    flex: 4;
+  }
+
+  &___acoes {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.listaTransacoes:hover {
+  background-color: rgba(211, 211, 211, 0.2);
+}

@@ -1,53 +1,5 @@
 <main class="container">
   <div class="inner-container">
-    <h1>Controle Financeiro</h1>
-
-    <div>
-      <div>
-        <h2>transações</h2>
-        <form [formGroup]="transacaoForm">
-          <div>
-            <label>valor:</label>
-            <input type="number" formControlName="valor" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="valor" id="valor" placeholder="R$" required>
-          </div>
-
-          <div>
-            <label for="tipo">tipo:</label>
-            <select name="tipo" id="tipo" formControlName="tipo" required>
-              <option value="gasto">gasto</option>
-              <option value="ganho">ganho</option>
-              <option value="investimento">investimento</option>
-            </select>
-          </div>
-
-
-          <div>
-            <label>descrição:</label>
-            <textarea type="text" formControlName="descricao" name="descrição" id="descrição"></textarea>
-          </div>
-          <div>
-            <label>data:</label>
-            <input type="date" formControlName="data" name="data" id="data">
-          </div>
-
-          <button type="submit" (click)="salvarTransacao(transacaoForm.value)">salvar</button>
-
-        </form>
-
-        <p>Form Value: {{ transacaoForm.value | json }}</p>
-      </div>
-
-      <div>
-        <div>
-          <h4>Saldo: {{saldoSub | async | currency:'BRL':true:'1.2-2'}}</h4>
-          <h4>Soma dos gastos: {{somaGastosSub | async | currency:'BRL':true:'1.2-2'}}</h4>
-          <h4>Soma dos ganhos: {{somaGanhosSub | async | currency:'BRL':true:'1.2-2'}}</h4>
-          <h4>Soma dos Investimentos: {{somaInvestimentosSub | async | currency:'BRL':true:'1.2-2'}}</h4>
-        </div>
-        <ul>
-          <li *ngFor="let transacao of transacoes">{{transacao.id}} - {{transacao.tipo}} - {{transacao.valor | currency:'BRL':true:'1.2-2'}} - {{transacao.data | date}} - {{transacao.descricao}}</li>
-        </ul>
-      </div>
-    </div>
+    <router-outlet></router-outlet>
   </div>
 </main>

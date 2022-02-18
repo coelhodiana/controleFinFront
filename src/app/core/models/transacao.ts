@@ -1,7 +1,7 @@
 export interface Transacao {
-  id: number;
+  _id: string;
   tipo: string;
   valor: number;
-  data: Date;
+  dataInclusao: Date;
   descricao: string;
 }
