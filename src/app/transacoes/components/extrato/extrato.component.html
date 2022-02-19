@@ -1,5 +1,5 @@
 <div class="box">
-  <h2 class="mb-2">Extrato</h2>
+  <h2 class="">Extrato</h2>
   <div class="listaTransacoes" *ngFor="let transacao of listaTransacao">
     <div class="listaTransacoes__coluna">
       <p>{{ transacao.dataInclusao | date }}</p>
@@ -21,11 +21,10 @@
         editar
       </button>
       <button
-        class="button m-2 is-danger is-inverted"
+        class=""
         (click)="deletarTransacao(transacao._id)"
       >
         <span class="icon">
-          <i class="fa fa-x"></i>
         </span>
         deletar
       </button>

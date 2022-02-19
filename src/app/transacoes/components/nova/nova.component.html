@@ -1,62 +1,60 @@
-<div>
-  <div class="box">
-    <h2 class="title">transações</h2>
-    <form [formGroup]="transacaoForm">
-      <div class="field">
-        <label class="label" for="valor">valor:</label>
-        <input
-          class="input is-small"
-          type="number"
-          formControlName="valor"
-          pattern="/^\d+(\.\d{2})?$/"
-          name="valor"
-          id="valor"
-          placeholder="R$"
-          required
-        />
-      </div>
+<div class="box">
+  <h2 class="title">transações</h2>
+  <form [formGroup]="transacaoForm">
+    <div class="field">
+      <label class="label" for="valor">valor:</label>
+      <input
+        class="input is-small"
+        type="number"
+        formControlName="valor"
+        pattern="/^\d+(\.\d{2})?$/"
+        name="valor"
+        id="valor"
+        placeholder="R$"
+        required
+      />
+    </div>
 
-      <div class="field">
-        <label class="label">descrição:</label>
-        <textarea
-          class="textarea"
-          rows="1"
-          type="text"
-          formControlName="descricao"
-          name="descrição"
-          id="descrição"
-        ></textarea>
-      </div>
+    <div class="field">
+      <label class="label">descrição:</label>
+      <textarea
+        class="textarea"
+        rows="1"
+        type="text"
+        formControlName="descricao"
+        name="descrição"
+        id="descrição"
+      ></textarea>
+    </div>
 
-      <div class="field">
-        <label class="label" for="tipo">tipo:</label>
-        <div class="select">
-          <select name="tipo" id="tipo" formControlName="tipo" required>
-            <option value="gasto">gasto</option>
-            <option value="ganho">ganho</option>
-            <option value="investimento">investimento</option>
-          </select>
-        </div>
+    <div class="field">
+      <label class="label" for="tipo">tipo:</label>
+      <div class="select">
+        <select name="tipo" id="tipo" formControlName="tipo" required>
+          <option value="gasto">gasto</option>
+          <option value="ganho">ganho</option>
+          <option value="investimento">investimento</option>
+        </select>
       </div>
+    </div>
 
-      <div class="field">
-        <label class="label">data:</label>
-        <input
-          class="input is-small"
-          type="date"
-          formControlName="dataInclusao"
-          name="data"
-          id="data"
-        />
-      </div>
+    <div class="field">
+      <label class="label">data:</label>
+      <input
+        class="input is-small"
+        type="date"
+        formControlName="dataInclusao"
+        name="data"
+        id="data"
+      />
+    </div>
 
-      <button
-        class="button is-primary"
-        type="submit"
-        (click)="salvarTransacao(transacaoForm.value)"
-      >
-        Salvar
-      </button>
-    </form>
-  </div>
+    <button
+      class="button is-primary"
+      type="submit"
+      (click)="salvarTransacao(transacaoForm.value)"
+    >
+      Salvar
+    </button>
+  </form>
 </div>

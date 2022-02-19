@@ -1,47 +1,47 @@
-<div class="columns">
-  <div class="column">
+<div class="balanco">
+  <div class="balanco__card">
     <div class="box">
-      <div class="is-flex is-justify-content-space-between">
+      <div class="">
         <p>Saldo</p>
         <p>R$</p>
       </div>
-      <p class="is-flex is-justify-content-flex-end is-size-2">
+      <p class="">
         {{ saldoSub$ | async | number: "1.2-2" }}
       </p>
     </div>
   </div>
 
-  <div class="column">
+  <div class="balanco__card">
     <div class="box">
-      <div class="is-flex is-justify-content-space-between">
+      <div class="">
         <p>Gastos</p>
         <p>R$</p>
       </div>
-      <p class="is-flex is-justify-content-flex-end is-size-2">
+      <p class="">
         {{ somaGastosSub$ | async | number: "1.2-2" }}
       </p>
     </div>
   </div>
 
-  <div class="column">
+  <div class="balanco__card">
     <div class="box">
-      <div class="is-flex is-justify-content-space-between">
+      <div class="">
         <p>Ganhos</p>
         <p>R$</p>
       </div>
-      <p class="is-flex is-justify-content-flex-end is-size-2">
+      <p class="">
         {{ somaGanhosSub$ | async | number: "1.2-2" }}
       </p>
     </div>
   </div>
 
-  <div class="column">
+  <div class="balanco__card">
     <div class="box">
-      <div class="is-flex is-justify-content-space-between">
+      <div class="">
         <p>Investimentos</p>
         <p>R$</p>
       </div>
-      <p class="is-flex is-justify-content-flex-end is-size-2">
+      <p class="">
         {{ somaInvestimentosSub$ | async | number: "1.2-2" }}
       </p>
     </div>
