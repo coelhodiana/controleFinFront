@@ -1,8 +1,7 @@
-import { BehaviorSubject, tap } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
+import { TransacoesService } from '../transacoes.service';
+import { Transacao } from '../transacao';
 
-import { Transacao } from './../../core/models/transacao';
-import { TransacoesService } from './../../core/services/transacoes.service';
 
 @Component({
   selector: 'app-transacoes',

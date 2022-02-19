@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject, map, Subscription } from 'rxjs';
-import { Transacao } from 'src/app/core/models/transacao';
-import { TransacoesService } from 'src/app/core/services/transacoes.service';
+import { BehaviorSubject, Subscription } from 'rxjs';
+
+import { Transacao } from '../../transacao';
+import { TransacoesService } from '../../transacoes.service';
 
 @Component({
-  selector: 'app-tipo-transacao',
-  templateUrl: './tipo-transacao.component.html',
-  styleUrls: ['./tipo-transacao.component.scss'],
+  selector: 'app-balanco',
+  templateUrl: './balanco.component.html',
+  styleUrls: ['./balanco.component.scss'],
 })
-export class TipoTransacaoComponent implements OnInit {
+export class BalancoComponent implements OnInit {
   transacoesSubscription: Subscription;
   somaGastosSub$ = new BehaviorSubject<number>(0);
   somaGanhosSub$ = new BehaviorSubject<number>(0);

@@ -5,24 +5,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CoreModule } from './core/core.module';
-import { FeatureModule } from './feature/feature.module';
-import { HomeComponent } from './feature/home/home.component';
-import { TransacoesModule } from './feature/transacoes/transacoes.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { registerLocaleData } from '@angular/common';
 import ptBr from '@angular/common/locales/pt';
 registerLocaleData(ptBr);
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CoreModule,
-    FeatureModule,
-    TransacoesModule,
     FontAwesomeModule,
   ],
   providers: [FormBuilder, { provide: LOCALE_ID, useValue: 'pt-br' }],

@@ -1,15 +1,15 @@
-import { Transacao } from './../../../../core/models/transacao';
 import { Component, OnInit } from '@angular/core';
 
-import { TransacoesService } from './../../../../core/services/transacoes.service';
 import { Subscription } from 'rxjs';
+import { Transacao } from '../../transacao';
+import { TransacoesService } from '../../transacoes.service';
 
 @Component({
-  selector: 'app-lista-transacoes',
-  templateUrl: './lista-transacoes.component.html',
-  styleUrls: ['./lista-transacoes.component.scss'],
+  selector: 'app-extrato',
+  templateUrl: './extrato.component.html',
+  styleUrls: ['./extrato.component.scss'],
 })
-export class ListaTransacoesComponent implements OnInit {
+export class ExtratoComponent implements OnInit {
   transacoesSubscription: Subscription;
 
   constructor(private servicoTransacao: TransacoesService) {

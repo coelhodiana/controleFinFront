@@ -1,16 +1,16 @@
+import { TransacoesService } from './../../transacoes.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { catchError, tap, BehaviorSubject } from 'rxjs';
+import { Transacao } from '../../transacao';
 
-import { Transacao } from './../../../../core/models/transacao';
-import { TransacoesService } from './../../../../core/services/transacoes.service';
 
 @Component({
-  selector: 'app-nova-transacao',
-  templateUrl: './nova-transacao.component.html',
-  styleUrls: ['./nova-transacao.component.scss'],
+  selector: 'app-nova',
+  templateUrl: './nova.component.html',
+  styleUrls: ['./nova.component.scss'],
 })
-export class NovaTransacaoComponent implements OnInit {
+export class NovaComponent implements OnInit {
   transacoes$ = new BehaviorSubject<Array<Transacao>>([]);
 
   transacaoForm = this.fb.group({
