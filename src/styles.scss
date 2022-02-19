@@ -1,11 +1,25 @@
+@use "@angular/material" as mat;
+
+$custom-typography: mat.define-typography-config(
+  $font-family: "Space Mono",
+);
+
+@include mat.core($custom-typography);
+
 html,
 body {
   padding: 0;
   margin: 0;
   background-color: rgba(119, 136, 153, 0.227);
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}

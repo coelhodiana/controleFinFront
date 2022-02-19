@@ -5,7 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BalancoComponent } from './components/balanco/balanco.component';
 import { CalendarioComponent } from './components/calendario/calendario.component';
 import { ExtratoComponent } from './components/extrato/extrato.component';
-import { NovaComponent } from './components/nova/nova.component';
+import { NovaComponent } from './components/nova-transacao/nova.component';
 import { PlanejamentoComponent } from './components/planejamento/planejamento.component';
 import { TransacoesComponent } from './pages/transacoes.component';
 import { TransacoesRoutingModule } from './transacoes-routing.module';
@@ -18,7 +18,7 @@ import { TransacoesRoutingModule } from './transacoes-routing.module';
     PlanejamentoComponent,
     NovaComponent,
     ExtratoComponent,
-    BalancoComponent
+    BalancoComponent,
   ],
 })
 export class TransacoesModule {}
