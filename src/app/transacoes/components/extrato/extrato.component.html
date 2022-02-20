@@ -1,4 +1,4 @@
-<div class="box">
+<div class="mat-card card-extrato">
   <h2 class="">Extrato</h2>
   <div class="listaTransacoes" *ngFor="let transacao of listaTransacao">
     <div class="listaTransacoes__coluna">
@@ -20,12 +20,8 @@
         </span>
         editar
       </button>
-      <button
-        class=""
-        (click)="deletarTransacao(transacao._id)"
-      >
-        <span class="icon">
-        </span>
+      <button class="" (click)="deletarTransacao(transacao._id)">
+        <span class="icon"> </span>
         deletar
       </button>
     </div>

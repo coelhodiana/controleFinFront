@@ -1,19 +1,18 @@
-<h1 class="mat-headline">Space Mono Works!___</h1>
-<div>
-  <div>
-    <app-calendario></app-calendario>
+<main class="transacoes">
+  <aside class="transacoes__form">
+    <app-nova></app-nova>
+  </aside>
+  <div class="transacoes__dashboard">
+    <div class="transacoes__dashboard">
+      <app-calendario></app-calendario>
+      <div class="transacoes__dashboard--coluna">
+        <div class="transacoes__dashboard--card">
+          <app-balanco></app-balanco>
+        </div>
+        <div class="transacoes__dashboard--card">
+          <app-extrato></app-extrato>
+        </div>
+      </div>
+    </div>
   </div>
-  <div>
-    <app-planejamento></app-planejamento>
-  </div>
-</div>
-<div>
-  <div>
-    <app-balanco></app-balanco>
-  </div>
-</div>
-<div>
-  <div>
-    <app-extrato></app-extrato>
-  </div>
-</div>
+</main>

@@ -1,49 +1,49 @@
-<div class="balanco">
-  <div class="balanco__card">
-    <div class="box">
-      <div class="">
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile class="bignumber">
+    <div class="mat-card bignumber__card">
+      <div class="bignumber__card--linha">
         <p>Saldo</p>
         <p>R$</p>
       </div>
-      <p class="">
+      <p class="mat-title">
         {{ saldoSub$ | async | number: "1.2-2" }}
       </p>
     </div>
-  </div>
+  </mat-grid-tile>
 
-  <div class="balanco__card">
-    <div class="box">
-      <div class="">
+  <mat-grid-tile class="bignumber">
+    <div class="mat-card bignumber__card">
+      <div class="bignumber__card--linha">
         <p>Gastos</p>
         <p>R$</p>
       </div>
-      <p class="">
+      <p class="mat-title">
         {{ somaGastosSub$ | async | number: "1.2-2" }}
       </p>
     </div>
-  </div>
+  </mat-grid-tile>
 
-  <div class="balanco__card">
-    <div class="box">
-      <div class="">
+  <mat-grid-tile class="bignumber">
+    <div class="mat-card bignumber__card">
+      <div class="bignumber__card--linha">
         <p>Ganhos</p>
         <p>R$</p>
       </div>
-      <p class="">
+      <p class="mat-title">
         {{ somaGanhosSub$ | async | number: "1.2-2" }}
       </p>
     </div>
-  </div>
+  </mat-grid-tile>
 
-  <div class="balanco__card">
-    <div class="box">
-      <div class="">
+  <mat-grid-tile class="bignumber">
+    <div class="mat-card bignumber__card">
+      <div class="bignumber__card--linha">
         <p>Investimentos</p>
         <p>R$</p>
       </div>
-      <p class="">
+      <p class="mat-title">
         {{ somaInvestimentosSub$ | async | number: "1.2-2" }}
       </p>
     </div>
-  </div>
-</div>
+  </mat-grid-tile>
+</mat-grid-list>

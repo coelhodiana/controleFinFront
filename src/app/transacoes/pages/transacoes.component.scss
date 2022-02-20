@@ -1,0 +1,23 @@
+.transacoes {
+  display: flex;
+  width: 100%;
+
+  &__form {
+    flex: 1;
+    margin: 1rem;
+  }
+
+  &__dashboard {
+    display: flex;
+    flex: 5;
+  }
+
+  &__dashboard:first-child {
+    width: 200px;
+  }
+
+  &__dashboard--coluna {
+    display: flex;
+    flex-direction: column;
+  }
+}

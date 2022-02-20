@@ -34,7 +34,7 @@ export class NovaComponent implements OnInit {
           this.servicoTransacao.listaTransacoes$.next(transacoes);
         })
       )
-      .subscribe((res) => console.log(res));
+      .subscribe();
   }
 
   salvarTransacao(transacao: Transacao) {
@@ -42,15 +42,15 @@ export class NovaComponent implements OnInit {
     this.servicoTransacao
       .postTransacao(transacao)
       .pipe(
+        tap((res) => {
+          this.servicoTransacao.atualizarTransacao(res);
+          this.transacaoForm.reset();
+        }),
         catchError((error) => {
           console.log(error);
           return error;
         })
       )
-      .subscribe((res) => {
-        console.log(res);
-        this.servicoTransacao.atualizarTransacao(res);
-      });
-    console.log(this.transacaoForm.valid);
+      .subscribe();
   }
 }

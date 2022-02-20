@@ -1,6 +1,14 @@
-.balanco {
+.bignumber {
   display: flex;
+  flex-direction: column;
+
   &__card {
-    flex: 1;
+    width: 100%;
+    margin: 1rem;
+  }
+
+  &__card--linha {
+    display: flex;
+    justify-content: space-between;
   }
 }
