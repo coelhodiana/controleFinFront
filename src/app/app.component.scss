@@ -8,3 +8,18 @@
   width: 1280px;
   padding: 20px;
 }
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.navbar {
+  &__title {
+    font-weight: 700;
+    cursor: pointer;
+  }
+  &__button {
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+}

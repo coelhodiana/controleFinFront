@@ -1,8 +1,19 @@
+<mat-toolbar color="primary" class="navbar">
+  <span class="title navbar__title" routerLink="">Controle financeiro</span>
+  <span class="example-spacer"></span>
+  <button
+    class="navbar__button"
+    mat-stroked-button
+    color="light"
+    type="button"
+    routerLink="/transacoes"
+  >
+    Transacoes
+  </button>
+</mat-toolbar>
+
 <main class="container">
   <div class="inner-container">
-    <button type="button" routerLink="/transacoes">Transacoes</button>
-    <button type="button" routerLink="">Home</button>
-
     <router-outlet></router-outlet>
   </div>
 </main>

@@ -1,18 +1,24 @@
 <mat-card>
   <h2 class="title">Transações</h2>
   <form [formGroup]="transacaoForm" class="transacao">
-    <mat-form-field class="transacao__input" appearance="fill">
+    <mat-form-field
+      class="transacao__input"
+      appearance="fill"
+      floatLabel="always"
+    >
       <mat-label>valor</mat-label>
       <input
         matInput
+        type="number"
+        class="example-right-align"
         formControlName="valor"
         attern="/^\d+(\.\d{2})?$/"
         name="valor"
         id="valor"
         placeholder="R$"
-        type="number"
         required
       />
+      <span matSuffix>.00</span>
     </mat-form-field>
 
     <mat-form-field class="transacao__input" appearance="fill">

@@ -8,6 +8,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 registerLocaleData(ptBr);
 
@@ -18,6 +21,9 @@ registerLocaleData(ptBr);
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
   ],
   providers: [FormBuilder, { provide: LOCALE_ID, useValue: 'pt-br' }],
   bootstrap: [AppComponent],

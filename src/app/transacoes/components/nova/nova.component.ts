@@ -15,7 +15,7 @@ export class NovaComponent implements OnInit {
   transacaoForm = this.fb.group({
     id: [0],
     tipo: ['gasto', Validators.required],
-    valor: [0, Validators.required],
+    valor: [null, Validators.required],
     dataInclusao: [new Date()],
     descricao: [''],
   });
