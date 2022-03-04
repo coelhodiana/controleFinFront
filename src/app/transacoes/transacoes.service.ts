@@ -9,7 +9,7 @@ import { Transacao } from './transacao';
 export class TransacoesService {
   listaTransacoes$ = new BehaviorSubject<Array<Transacao>>([]);
 
-  url = 'http://localhost:3000/transacoes';
+  url = 'http://31.220.58.162:3000/transacoes';
 
   constructor(private http: HttpClient) {}
 
